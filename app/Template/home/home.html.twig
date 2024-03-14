@@ -4,5 +4,50 @@
 
 {% block content %}
     <h1>{{ titre }}</h1>
+    <form action="encrypt.html.twig">
+        <label for="text">texte :</label><br>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Envoyer">
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Input à Texte</title>
+        </head>
+        <body>
+
+        <input type="text" id="inputText" placeholder="Saisissez quelque chose...">
+        <p id="displayText"></p>
+
+        <script>
+            // Récupération des éléments HTML
+            var inputElement = document.getElementById("inputText");
+            var displayElement = document.getElementById("displayText");
+
+            // Ajout d'un écouteur d'événement pour détecter les saisies dans l'input
+            inputElement.addEventListener("input", function() {
+                // Mettre à jour le contenu de l'élément de texte avec la valeur de l'input
+                displayElement.textContent = inputElement.value.-;
+            });
+        </script>
+
+        </body>
+        </html>
+
+    </form>
+
+
+
+
+
+
+
 {% endblock %}
 
